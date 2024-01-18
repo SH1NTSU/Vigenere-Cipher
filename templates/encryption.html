@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption App</title>
+</head>
+<body>
+    <h1>Text Encryption</h1>
+
+    <form method="post">
+        <label for="user_input">Enter Text:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <label for="key">Enter Key:</label>
+        <input type="text" id="key" name="key" required>
+        <button type="submit">Encrypt</button>
+    </form>
+
+    {% if encrypted_text %}
+        <div>
+            <h2>Encrypted Text:</h2>
+            <p>{{ encrypted_text }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
