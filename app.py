@@ -26,7 +26,7 @@ def encryption():
         return encrypted_text
 
     return render_template('encryption.html')
-@app.route('/decryption', methods=['GET', 'POST'])
+@app.route('/decrypt', methods=['GET', 'POST'])
 def decryption():
     if request.method == 'POST':
         encrypted_text = request.form.get('user_input')
@@ -41,7 +41,7 @@ def decryption():
                 decrypted_text += index_l[num]
                 i += 1
         return decrypted_text
-    return render_template('encryption.html')
+    return render_template('decryption.html')
 
 
 if __name__ == '__main__':
